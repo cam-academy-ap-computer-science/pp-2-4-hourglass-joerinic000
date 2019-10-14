@@ -31,7 +31,6 @@
 	Print a "\"
 	
 			
-		drawBottom();
 */
 
 public class Hourglass {
@@ -41,6 +40,7 @@ public class Hourglass {
 		drawLine();
 		drawTop();
 		drawCentre();
+		drawBottom();
 		drawLine();
 	}
 	public static void drawLine() {
@@ -68,5 +68,18 @@ public class Hourglass {
 			System.out.print(" ");
 		}
 		System.out.print("||\n");
+	}
+	public static void drawBottom() {
+		for(int space = 1; space <= HALF_HEIGHT; space++) { 
+			for(int i = 1; i <= (HALF_HEIGHT - space) + 1; i++ ) {
+				System.out.print(" ");
+			}
+			System.out.print("/");
+			for(int i = 1; i <= 2 * (space - 1) + 2; i++) {
+				System.out.print(":");
+			
+			}
+			System.out.println("\\");
+		}
 	}
 }

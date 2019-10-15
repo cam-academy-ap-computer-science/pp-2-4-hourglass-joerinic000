@@ -34,7 +34,7 @@
 */
 
 public class Hourglass {
-	public static final int HALF_HEIGHT = 4;
+	public static final int HALF_HEIGHT = 4; //Change the variable and it works to change the height
 	
 	public static void main(String[] args) {
 		drawLine();
@@ -43,14 +43,14 @@ public class Hourglass {
 		drawBottom();
 		drawLine();
 	}
-	public static void drawLine() {
+	public static void drawLine() { //Prints the top and bottom lines
 		System.out.print("|");
 		for(int i = 1; i <= (HALF_HEIGHT * 2 + 2); i++) {
 			System.out.print("\"");
 		}
 		System.out.println("|");
 	}
-	public static void drawTop() {
+	public static void drawTop() { //Prints top half w/o line
 		for(int space = 1; space <= HALF_HEIGHT; space++) {
 			for(int i = 1; i <= space; i++) {
 				System.out.print(" ");
@@ -63,13 +63,13 @@ public class Hourglass {
 			System.out.println("/");
 		}
 	}
-	public static void drawCentre() {
+	public static void drawCentre() { //Prints the two verical lines in the centre
 		for(int i = 1; i <= HALF_HEIGHT + 1; i++) { 
 			System.out.print(" ");
 		}
 		System.out.print("||\n");
 	}
-	public static void drawBottom() {
+	public static void drawBottom() { //Prints bottom w/o line
 		for(int space = 1; space <= HALF_HEIGHT; space++) { 
 			for(int i = 1; i <= (HALF_HEIGHT - space) + 1; i++ ) {
 				System.out.print(" ");
